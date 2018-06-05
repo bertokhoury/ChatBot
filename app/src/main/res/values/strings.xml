@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ChatBotSOFWERX</string>
+    <string name="search_view">SearchView to test query</string>
 </resources>
