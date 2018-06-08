@@ -52,6 +52,15 @@
             android:layout_marginBottom="16dp"
             android:layout_marginStart="19dp"
             android:text="@string/help_button_string" />
+
+        <Button
+            android:id="@+id/tmpButton"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/goToHelpButton"
+            android:layout_marginEnd="21dp"
+            android:text="@string/tmp_button_str" />
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
