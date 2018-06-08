@@ -4,16 +4,32 @@ import android.app.Activity;
 import android.app.SearchManager;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.SearchView.SearchAutoComplete;
 import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.TextView;
-import android.support.v7.widget.SearchView.SearchAutoComplete;
-public class MainActivity extends Activity {
 
-    private ImageView sofwerxLogoIV;
-    private TextView searchViewTextDescriptTV;
-    private SearchView searchViewSV;
-    private SearchAutoComplete searchAutoCompleteSAC;
+import com.github.barteksc.pdfviewer.PDFView;
+import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
+import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
+import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
+import com.shockwave.pdfium.PdfDocument;
+
+
+
+
+public class MainActivity extends Activity {
+    public static final String TAG = MainActivity.class.getSimpleName();
+    public static final String SAMPLE_FILE = "field_manual.pdf";
+     PDFView pdfView;
+     Integer pageNumberPDF = 0;
+     String fileNamePDF;
+
+
+     ImageView sofwerxLogoIV;
+     TextView searchViewTextDescriptTV;
+     SearchView searchViewSV;
+     SearchAutoComplete searchAutoCompleteSAC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +41,7 @@ public class MainActivity extends Activity {
         searchViewTextDescriptTV = (TextView) findViewById(R.id.textViewSVDescript);
         searchViewSV = (SearchView) findViewById(R.id.searchView);
         searchAutoCompleteSAC = (SearchAutoComplete) findViewById(R.id.searchView);
+
 
         getSearchIntent();
 
@@ -45,5 +62,7 @@ public class MainActivity extends Activity {
         }
 
     }
+
+
 
 }
