@@ -1,8 +1,9 @@
 package com.example.albertkhoury.chatbotsofwerx;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 
 import com.github.barteksc.pdfviewer.PDFView;
@@ -11,9 +12,11 @@ import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
 import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
 import com.shockwave.pdfium.PdfDocument;
 
-import java.util.List;
 
-public class pdfViewerActivity extends Activity implements OnPageChangeListener, OnLoadCompleteListener {
+//declared abstract due to no implementation of:
+    // OnPageChangeListener AND OnLoadCompleteListener
+    //as of now
+public abstract class pdfViewerActivity extends Activity implements OnPageChangeListener, OnLoadCompleteListener {
 
 
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -29,6 +32,7 @@ public class pdfViewerActivity extends Activity implements OnPageChangeListener,
         setContentView(R.layout.pdf_viewer);
 
         pdfView= (PDFView)findViewById(R.id.pdfView);
+        returnToSearch = (Button) findViewById(R.id.returnButton);
         displayFromAsset(SAMPLE_FILE);
     }
 
@@ -47,6 +51,14 @@ public class pdfViewerActivity extends Activity implements OnPageChangeListener,
                 .load();
     }
 
+    public void goToHelpActivity(View view) {
+        if (view == returnToSearch) {
+            Intent intentPdfViewer = new Intent(pdfViewerActivity.this, MainActivity.class);
+            pdfViewerActivity.this.startActivity(intentPdfViewer);
+        }
+    }
+
+/*
 
     @Override
     public void onPageChanged(int page, int pageCount) {
@@ -72,6 +84,7 @@ public class pdfViewerActivity extends Activity implements OnPageChangeListener,
             }
         }
     }
+*/
 
 
 }
