@@ -5,13 +5,11 @@ import android.app.SearchManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView.SearchAutoComplete;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.SearchView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
@@ -22,7 +20,7 @@ import com.shockwave.pdfium.PdfDocument;
 
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity{
     public static final String TAG = MainActivity.class.getSimpleName();
     public static final String SAMPLE_FILE = "field_manual.pdf";
      PDFView pdfView;
@@ -34,8 +32,8 @@ public class MainActivity extends Activity {
      TextView searchViewTextDescriptTV;
      SearchView searchViewSV;
      SearchAutoComplete searchAutoCompleteSAC;
-     Button goToHelpB = (Button)findViewById(R.id.goToHelpButton);
-     Button tmpButton = (Button)findViewById(R.id.tmpButton);
+     Button goToHelpB;
+     Button tmpButton;
 
 
     @Override
@@ -48,6 +46,8 @@ public class MainActivity extends Activity {
         searchViewTextDescriptTV = (TextView) findViewById(R.id.textViewSVDescript);
         searchViewSV = (SearchView) findViewById(R.id.searchView);
         searchAutoCompleteSAC = (SearchAutoComplete) findViewById(R.id.searchView);
+        goToHelpB = (Button)findViewById(R.id.goToHelpButton);
+        tmpButton = (Button)findViewById(R.id.tmpButton);
 
 
         getSearchIntent();
@@ -74,6 +74,7 @@ public class MainActivity extends Activity {
     }
 
     //this is being implemented for the fact of the matter being we do not have a search yet.
+    //so this just takes us to the PDF Viewer
     //once a search is implementable we will remove this function and use SearchView
     public void goToPDFViewer(View view){
         if (view == tmpButton){
@@ -85,7 +86,6 @@ public class MainActivity extends Activity {
 
     }
 
-    //onClick take user to HelpActivity
     public void goToHelpActivity(View view){
         if(view == goToHelpB){
             Intent intentMainActivity = new Intent(MainActivity.this, HelpPageActivity.class);
