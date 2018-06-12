@@ -3,6 +3,7 @@ package com.example.albertkhoury.chatbotsofwerx;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -12,14 +13,17 @@ import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
 import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
 import com.shockwave.pdfium.PdfDocument;
 
+import java.util.List;
+
+import static com.example.albertkhoury.chatbotsofwerx.MainActivity.TAG;
+
 
 //declared abstract due to no implementation of:
     // OnPageChangeListener AND OnLoadCompleteListener
     //as of now
-public abstract class pdfViewerActivity extends Activity implements OnPageChangeListener, OnLoadCompleteListener {
+public class pdfViewerActivity extends Activity implements OnPageChangeListener, OnLoadCompleteListener {
 
-
-    private static final String TAG = MainActivity.class.getSimpleName();
+    private static final String TAG = pdfViewerActivity.class.getSimpleName();
     public static final String SAMPLE_FILE = "Ben Clark - Red Team Field Manual.pdf";
     PDFView pdfView;
     Integer pageNumber = 0;
@@ -51,14 +55,14 @@ public abstract class pdfViewerActivity extends Activity implements OnPageChange
                 .load();
     }
 
-    public void goToHelpActivity(View view) {
+    public void gotoMainActivity(View view) {
         if (view == returnToSearch) {
             Intent intentPdfViewer = new Intent(pdfViewerActivity.this, MainActivity.class);
             pdfViewerActivity.this.startActivity(intentPdfViewer);
         }
     }
 
-/*
+
 
     @Override
     public void onPageChanged(int page, int pageCount) {
@@ -66,8 +70,7 @@ public abstract class pdfViewerActivity extends Activity implements OnPageChange
         setTitle(String.format("%s %s / %s", pdfFileName, page + 1, pageCount));
     }
 
-
-
+    @Override
     public void loadComplete(int nbPages) {
         PdfDocument.Meta meta = pdfView.getDocumentMeta();
         printBookmarksTree(pdfView.getTableOfContents(), "-");
@@ -84,7 +87,7 @@ public abstract class pdfViewerActivity extends Activity implements OnPageChange
             }
         }
     }
-*/
+
 
 
 }

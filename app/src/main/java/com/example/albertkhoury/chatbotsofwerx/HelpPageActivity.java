@@ -20,7 +20,7 @@ public class HelpPageActivity extends Activity {
         returnToMainActivity = (Button) findViewById(R.id.helpToMainButton);
     }
 
-    public void goToHelpActivity(View view) {
+    public void goToMainActivityFromHelp(View view) {
         if (view == returnToMainActivity) {
             Intent intentHelpActivity = new Intent(HelpPageActivity.this, MainActivity.class);
             HelpPageActivity.this.startActivity(intentHelpActivity);

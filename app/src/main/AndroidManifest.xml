@@ -19,10 +19,11 @@
 
             <meta-data
                 android:name="android.app.searchable"
-                android:resource="@xml/searchable" />
+                android:resource="@xml/searchable" /></activity>
 
+        <activity android:name=".pdfViewerActivity"></activity>
 
-        </activity>
+        <activity android:name=".HelpPageActivity"></activity>
     </application>
 
 </manifest>
