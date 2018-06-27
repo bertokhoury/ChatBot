@@ -9,7 +9,9 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <ImageView
             android:id="@+id/sofwerxLogo"
@@ -20,25 +22,6 @@
             tools:layout_constraintTop_toTopOf="parent"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="0dp" />
-
-        <SearchView
-            android:id="@+id/searchView"
-            android:layout_width="214dp"
-            android:layout_height="35dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="108dp" >
-
-
-        </SearchView>
-
-        <TextView
-            android:id="@+id/textViewSVDescript"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/searchView"
-            android:layout_marginBottom="-108dp"
-            android:text="@string/search_view"
-            android:textSize="18sp" />
 
         <Button
             android:id="@+id/goToHelpButton"
@@ -60,6 +43,25 @@
             android:layout_marginEnd="21dp"
             android:onClick="goToPDFViewer"
             android:text="@string/tmp_button_str" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="237dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="132dp"
+            android:hint="@string/search_hint"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/searcher"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/editText"
+            android:layout_toEndOf="@+id/editText"
+            android:onClick="goToPDFViewerDummy"
+            android:text="@string/search_button" />
+
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

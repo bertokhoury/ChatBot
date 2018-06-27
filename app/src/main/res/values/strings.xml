@@ -1,8 +1,9 @@
 <resources>
+    <string name="search_hint">Enter Search Here:</string>
     <string name="tmp_button_string">Test PDF Viewer</string>
-
+    <string name="search_button">Search</string>
     <string name="app_name">ChatBotSOFWERX</string>
-    <string name="search_view">SearchView to test query</string>
+    <string name="search_view">Please input search below:</string>
     <string name="help_populate_scrollview">-------------------------------------------------------------------------------
         --------------------------------------------------------------------------------
         ----xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
