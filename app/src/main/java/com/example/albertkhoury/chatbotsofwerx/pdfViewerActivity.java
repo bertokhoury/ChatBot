@@ -13,9 +13,11 @@ import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
 import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
 import com.shockwave.pdfium.PdfDocument;
 
+import com.tom_roush.pdfbox.pdmodel.PDDocument;
+import com.tom_roush.pdfbox.text.PDFTextStripper;
+
 import java.util.List;
 
-import static com.example.albertkhoury.chatbotsofwerx.MainActivity.TAG;
 
 
 //declared abstract due to no implementation of:
@@ -87,7 +89,6 @@ public class pdfViewerActivity extends Activity implements OnPageChangeListener,
             }
         }
     }
-
 
 
 }
