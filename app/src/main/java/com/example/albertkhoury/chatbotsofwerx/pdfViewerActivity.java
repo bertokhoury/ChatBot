@@ -13,8 +13,6 @@ import com.github.barteksc.pdfviewer.listener.OnPageChangeListener;
 import com.github.barteksc.pdfviewer.scroll.DefaultScrollHandle;
 import com.shockwave.pdfium.PdfDocument;
 
-import com.tom_roush.pdfbox.pdmodel.PDDocument;
-import com.tom_roush.pdfbox.text.PDFTextStripper;
 
 import java.util.List;
 
@@ -27,6 +25,7 @@ public class pdfViewerActivity extends Activity implements OnPageChangeListener,
 
     private static final String TAG = pdfViewerActivity.class.getSimpleName();
     public static final String SAMPLE_FILE = "Ben Clark - Red Team Field Manual.pdf";
+
     PDFView pdfView;
     Integer pageNumber = 0;
     String pdfFileName;

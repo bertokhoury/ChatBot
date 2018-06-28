@@ -1,15 +1,14 @@
 package com.example.albertkhoury.chatbotsofwerx;
 
 import android.app.Activity;
-import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.EditText;
-import android.widget.SearchView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.github.barteksc.pdfviewer.PDFView;
 
@@ -18,26 +17,23 @@ import com.github.barteksc.pdfviewer.PDFView;
 
 
 public class MainActivity extends Activity{
-
-    public static final String TAG = MainActivity.class.getSimpleName();
-    public static final String SAMPLE_FILE = "Ben Clark-Red Team Field Manual.pdf";
     PDFView pdfView;
-    Integer pageNumberPDF = 0;
-    String fileNamePDF;
     ImageView sofwerxLogoIV;
-    TextView searchViewTextDescriptTV;
-    SearchView searchViewSV;
-    SearchManager searchManager;
     Button goToHelpB;
     Button tmpButton;
     Button searcherB;
     EditText searchInputET;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
 
 
         searchInputET = (EditText) findViewById(R.id.editText);
@@ -47,22 +43,31 @@ public class MainActivity extends Activity{
         searcherB = (Button) findViewById(R.id.searcher);
     }
 
-    public void searchForPDFToOpen(View view){
-        String searchText = searchViewSV.toString();
+    public SharedPreferences saveEditTextString(){
+        View view = null;
+        if (view == searchInputET){
+            //save Edit Text into SharedPreferences
+            sharedPreferences = getSharedPreferences(String.valueOf(searchInputET), Context.MODE_PRIVATE);
+            editor = sharedPreferences.edit();
 
-        if (view == searcherB){
-
-            Intent intent = new Intent(this, pdfViewerActivity.class);
-            startActivity(intent);
+            editor.putString("search_key", String.valueOf(sharedPreferences));
+            editor.commit();
 
         }
+        return sharedPreferences;
+    }
 
+    //get string from Shared Preferences
+    public String retrieveString(){
+        String searchInputted = sharedPreferences.getString("search_key", "");
+        return searchInputted;
     }
 
     //this is a dummy button for searching from EditText String...
     public void goToPDFViewerDummy(View view){
         if (view == searcherB){
-            //PDFSearcher.startSearch();
+            //saveEditTextString();
+            //retrieveString();
 
             Intent intent = new Intent(this, pdfViewerActivity.class);
             startActivity(intent);
