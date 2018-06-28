@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.tom_roush:pdfbox-android-1.8.10.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/pdfbox-android-1.8.10.0.aar/7cc13829fe029a2a8ae8dec8bc1af367/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/pdfbox-android-1.8.10.0.aar/7cc13829fe029a2a8ae8dec8bc1af367/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.tom_roush/pdfbox-android/1.8.10.0/2392abcddd90a37f14780a81fb5ae3d46bf52432/pdfbox-android-1.8.10.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
