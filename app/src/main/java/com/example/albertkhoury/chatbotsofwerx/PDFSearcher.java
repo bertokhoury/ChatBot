@@ -9,7 +9,8 @@ import java.lang.System;
 import com.tom_roush.pdfbox.pdmodel.PDDocument;
 import com.tom_roush.pdfbox.text.PDFTextStripper;
 
-public class PDFSearcher extends MainActivity{
+
+public class PDFSearcher {
 
     public static void startSearch() {
         String searchWord = "linux file system";
