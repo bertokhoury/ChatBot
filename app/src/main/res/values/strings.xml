@@ -4,56 +4,15 @@
     <string name="search_button">Search</string>
     <string name="app_name">ChatBotSOFWERX</string>
     <string name="search_view">Please input search below:</string>
-    <string name="help_populate_scrollview">-------------------------------------------------------------------------------
-        --------------------------------------------------------------------------------
-        ----xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        xxxxxxxxxxx---------------------------------------------------------------
-        -------------------------------------------------------------------------
-        -------------------------------------------------------------------------
-        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        Return to SearchReturn to SearchReturn to Search
-    Return to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to Search ;)
-        rn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to Search ;)
-        rn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to Search ;)
-        rn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to SearchReturn to Search
-        Return to SearchReturn to SearchReturn to SearchReturn to Search ;)
-        -------------------------------------------------------------------------
-        -------------------------------------------------------------------------
-        -------------------------------------------------------------------------
-        -------------------------------------------------------------------------
-        -------------------------------------------------------------------------
-        -------------------------------------------------------------------------
-        -------------------------------------------------------------------------
-        -------------------------------------------------------------------------
-        ----xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</string>
+    <string name="help_populate_scrollview">
+        To search for the PDF User Instruction you are looking for simply:
+
+            1) Input keyword into text field through keyboard or voice button
+            2)Simply click the search button to begin the search
+
+
+            To reset, simply return back to the home page.
+    </string>
     <string name="help_return_search">Return to Search</string>
     <string name="help_page_title">Please refer to text below on assistance with using the application</string>
     <string name="help_button_string">Need help? Click Here</string>

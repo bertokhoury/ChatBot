@@ -5,15 +5,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.widget.EditText;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.github.barteksc.pdfviewer.PDFView;
-
-
-
 
 
 public class MainActivity extends Activity{
@@ -23,7 +22,7 @@ public class MainActivity extends Activity{
     Button tmpButton;
     Button searcherB;
     EditText searchInputET;
-    SharedPreferences sharedPreferences;
+    SharedPreferences sharedPreferences = null;
     SharedPreferences.Editor editor;
 
 
@@ -35,38 +34,45 @@ public class MainActivity extends Activity{
 
 
 
-
         searchInputET = (EditText) findViewById(R.id.editText);
         sofwerxLogoIV = (ImageView) findViewById(R.id.sofwerxLogo);
         goToHelpB = (Button)findViewById(R.id.goToHelpButton);
         tmpButton = (Button)findViewById(R.id.tmpButtonB);
         searcherB = (Button) findViewById(R.id.searcher);
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        editor = sharedPreferences.edit();
+        //editor.putString("search_key", String.valueOf(sharedPreferences));
+
     }
 
-    public SharedPreferences saveEditTextString(){
-        View view = null;
-        if (view == searchInputET){
-            //save Edit Text into SharedPreferences
-            sharedPreferences = getSharedPreferences(String.valueOf(searchInputET), Context.MODE_PRIVATE);
-            editor = sharedPreferences.edit();
+    public void saveEditTextString(SharedPreferences sharedPreferences){
 
-            editor.putString("search_key", String.valueOf(sharedPreferences));
-            editor.commit();
+        //save Edit Text into SharedPreferences
+        this.sharedPreferences = getSharedPreferences(String.valueOf(searchInputET), Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+        editor.putString("search_key", String.valueOf(this.sharedPreferences));
+        editor.commit();
+        editor.apply();
 
-        }
-        return sharedPreferences;
+        Toast.makeText(getApplicationContext(),"String saved...",Toast.LENGTH_LONG).show();
+
+
+        //return this.sharedPreferences;
     }
 
     //get string from Shared Preferences
     public String retrieveString(){
         String searchInputted = sharedPreferences.getString("search_key", "");
+        Toast.makeText(getApplicationContext(),"String stored retrieved...",Toast.LENGTH_LONG).show();
+
         return searchInputted;
     }
 
     //this is a dummy button for searching from EditText String...
+    //NOTE: The Search Implementation is not functional, yet.
     public void goToPDFViewerDummy(View view){
         if (view == searcherB){
-            //saveEditTextString();
+            //saveEditTextString(sharedPreferences);
             //retrieveString();
 
             Intent intent = new Intent(this, pdfViewerActivity.class);
